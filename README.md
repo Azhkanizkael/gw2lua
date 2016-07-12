@@ -20,5 +20,7 @@ Logging in will log you in to Guild Wars 2 with the selected account in the drop
 
 ###Help
 If you have any requests for help or assistance, please leave me feedback on twitter or twitch.
+
 Twitter: @Azhkanizkael
+
 Twitch: Twitch.tv/Azhkanizkael
