@@ -10,13 +10,13 @@ Now you need to add your account(s). This can be done by selecting the "Create N
 ###Options
 Now that you're set up, you can select any of the options. You can delete individual accounts, delete all accounts, update gw2, repair gw2, or log in to gw2 with the selected account.
 
-Deleting and indidual account will delete the currently selected account from the hash.gw2lua file. This will work for deleting account unless there is only 1 account in which case you need to select "Delete All Accounts" in order to delete it. Deleting all accounts clears the hash.gw2lua file of all account entries and leaves it blank. These will display confirmation dialogues to confirm that you want to perform the action you requested.
+Deleting an account will delete the currently selected account from the hash.gw2lua file. This will work for deleting account unless there is only 1 account in which case you need to select "Delete All Accounts" in order to delete it. Deleting all accounts clears the hash.gw2lua file of all account entries and leaves it blank. These will display confirmation dialogues to confirm that you want to perform the action you requested.
 
 Updating Guild Wars 2 will just launch the Guild Wars 2 launcher normally with no parameters.
 
 Repairing Guild Wars 2 will launch Guild Wars 2 with the -repair parameter. This will display a confirmation dialogue to confirm that this is the action you want to perform.
 
-Logging in will log you in to Guild Wars 2 with the selected account in the dropdown menu. It takes the account provided and matches the password from the hash.gw2lua file then decrypts the password and passes it to a command line to run the game with the parameters required to run the game whiel bypassing the launcher and going straight to the character select screen.
+Logging in will log you in to Guild Wars 2 with the selected account in the dropdown menu. It takes the account provided and matches the password from the hash.gw2lua file then decrypts the password and passes it to a command line to run the game with the parameters required to run the game while bypassing the launcher and going straight to the character select screen.
 
 ###Help
 If you have any requests for help or assistance, please leave me feedback on twitter or twitch.
