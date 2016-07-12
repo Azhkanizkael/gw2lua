@@ -1,8 +1,6 @@
 # Guild Wars 2 Login Utility Application
 ###Setup
-If you're running 64bit Windows, run gw2lua-64.exe
-
-If you're running 32bit Windows, run gw2lua.exe
+If you're running 64bit Windows, run gw2lua-64.exe, if you're running 32bit Windows, run gw2lua.exe
 
 Once the application has loaded, you're going to want to select "Guild Wars 2 Location" and navigate through the dialogue box to find your gw2.exe or gw2-64.exe based on if you're 32 or 64 bit. Once this step has been completed it will save the data to %appdata%\gw2lua\settings.gw2lua for reference later. This can be changed any time by going through this step again.
 
