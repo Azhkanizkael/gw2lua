@@ -165,7 +165,7 @@ Func gw2lua()
 						$accountname = GUICtrlRead($gui_accountlist)
 						$password = DecryptAccount($accountname)
 						If GUICtrlRead($gui_multiclient) = 1 Then
-							ShellExecute(@AppDataDir & "\gw2lua\multi.bat", "", "", "", @SW_SHOW)
+							ShellExecute(@AppDataDir & "\gw2lua\multi.bat", "", "", "", @SW_HIDE)
 						EndIf
 						ShellExecute($gw2, ' -email "' & $accountname & '" -password "' & $password & '"' & $gw2_parameters)
 					Case $gui_delete
@@ -886,8 +886,7 @@ Func ReadSettings()
 EndFunc   ;==>ReadSettings
 
 Func MultiClientGO()
-	$handlebat = 'for /f "tokens=3,6 delims=: " %%I in (''handle.exe -accepteula -a "AN-Mutex-Window-Guild Wars 2"'') do if not "%%J" == "" handle.exe -accepteula -c %%J -y -p %%I' &@CRLF & 'Pause'
-	FileCopy("handle.exe", @AppDataDir & "\gw2lua\handle.exe")
+	$handlebat = 'for /f "tokens=3,6 delims=: " %%I in (''handle.exe -accepteula -a "AN-Mutex-Window-Guild Wars 2"'') do if not "%%J" == "" handle.exe -accepteula -c %%J -y -p %%I'
 	$bat = FileOpen(@AppDataDir & "\gw2lua\multi.bat", $FO_OVERWRITE)
 	FileWrite($bat, $handlebat)
 	FileClose($bat)
