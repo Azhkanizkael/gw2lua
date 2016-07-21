@@ -23,3 +23,13 @@ If you have any requests for help or assistance, please leave me feedback on twi
 Twitter: @Azhkanizkael
 
 Twitch: Twitch.tv/Azhkanizkael
+
+###Legality of Multiclient
+https://forum-en.guildwars2.com/forum/support/account/Policy-3rd-Party-Programs-Multi-Boxing-Macros/first
+
+Dual- or Multi-Boxing
+* You may use more than one account at the same time.
+* You may use more than one computer at the same time.
+* You must be actively playing on each account.
+* And as stated above, you may not program your keyboard to perform functions on more than one account at a time. 
+* For example, if you press W on your keyboard to move forward, a single character on a single account should move forward. The keystroke or mouse click should not perform functions on more than one account.
