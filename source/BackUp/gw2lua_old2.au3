@@ -4,7 +4,6 @@
 #AutoIt3Wrapper_Outfile_x64=..\exe\gw2lua-64.exe
 #AutoIt3Wrapper_Compile_Both=y
 #AutoIt3Wrapper_UseX64=y
-#AutoIt3Wrapper_Add_Constants=n
 #AutoIt3Wrapper_Run_Tidy=y
 #EndRegion ;**** Directives created by AutoIt3Wrapper_GUI ****
 ; *** Start added by AutoIt3Wrapper ***
@@ -67,34 +66,34 @@ Func gw2lua()
 		DirCreate(@AppDataDir & "\gw2lua")
 		FileOpen($gw2loc)
 		FileWrite($gw2loc, "gw2location|C:\Program Files (x86)\Guild Wars 2\Gw2-64.exe" & @CRLF & _
-				"32|0" & @CRLF & _
-				"assetsrv|0|" & @CRLF & _
-				"authsrv|0|" & @CRLF & _
-				"autologin|0" & @CRLF & _
-				"bmp|0" & @CRLF & _
-				"clientport80|0" & @CRLF & _
-				"clientport443|0" & @CRLF & _
-				"copydat|0" & @CRLF & _
-				"dat|0|" & @CRLF & _
-				"diag|0" & @CRLF & _
-				"dx9single|0" & @CRLF & _
-				"fprwardrenderer|0" & @CRLF & _
-				"fps|0|" & @CRLF & _
-				"image|0" & @CRLF & _
-				"maploadinfo|0" & @CRLF & _
-				"mce|0" & @CRLF & _
-				"nopatchui|1" & @CRLF & _
-				"nomusic|0" & @CRLF & _
-				"noui|0" & @CRLF & _
-				"nosound|0" & @CRLF & _
-				"prefreset|0" & @CRLF & _
-				"sharearchive|0" & @CRLF & _
-				"uispanallmonitors|0" & @CRLF & _
-				"uninstall|0" & @CRLF & _
-				"useoldfov|0" & @CRLF & _
-				"verify|0" & @CRLF & _
-				"windowed|0" & @CRLF & _
-				"umbra|0")
+							"32|0" & @CRLF & _
+							"assetsrv|0|" & @CRLF & _
+							"authsrv|0|" & @CRLF & _
+							"autologin|0" & @CRLF & _
+							"bmp|0" & @CRLF & _
+							"clientport80|0" & @CRLF & _
+							"clientport443|0" & @CRLF & _
+							"copydat|0" & @CRLF & _
+							"dat|0|" & @CRLF & _
+							"diag|0" & @CRLF & _
+							"dx9single|0" & @CRLF & _
+							"fprwardrenderer|0" & @CRLF & _
+							"fps|0|" & @CRLF & _
+							"image|0" & @CRLF & _
+							"maploadinfo|0" & @CRLF & _
+							"mce|0" & @CRLF & _
+							"nopatchui|1" & @CRLF & _
+							"nomusic|0" & @CRLF & _
+							"noui|0" & @CRLF & _
+							"nosound|0" & @CRLF & _
+							"prefreset|0" & @CRLF & _
+							"sharearchive|0" & @CRLF & _
+							"uispanallmonitors|0" & @CRLF & _
+							"uninstall|0" & @CRLF & _
+							"useoldfov|0" & @CRLF & _
+							"verify|0" & @CRLF & _
+							"windowed|0" & @CRLF & _
+							"umbra|0")
 		FileClose($gw2loc)
 	ElseIf FileExists($gw2loc) = 1 Then
 		GUICtrlSetState($gui_login, $GUI_ENABLE)
@@ -107,36 +106,36 @@ Func gw2lua()
 		$fileinfo = FileReadToArray($FileHandle)
 		If UBound($fileinfo) <= 20 Then
 			FileClose($gw2loc)
-			FileOpen($gw2loc, $FO_OVERWRITE)
+			FileOpen($gw2loc,$FO_OVERWRITE)
 			FileWrite($gw2loc, "gw2location|" & $gw2 & @CRLF & _
-					"32|0" & @CRLF & _
-					"assetsrv|0|" & @CRLF & _
-					"authsrv|0|" & @CRLF & _
-					"autologin|0" & @CRLF & _
-					"bmp|0" & @CRLF & _
-					"clientport80|0" & @CRLF & _
-					"clientport443|0" & @CRLF & _
-					"copydat|0" & @CRLF & _
-					"dat|0|" & @CRLF & _
-					"diag|0" & @CRLF & _
-					"dx9single|0" & @CRLF & _
-					"fprwardrenderer|0" & @CRLF & _
-					"fps|0|" & @CRLF & _
-					"image|0" & @CRLF & _
-					"maploadinfo|0" & @CRLF & _
-					"mce|0" & @CRLF & _
-					"nopatchui|1" & @CRLF & _
-					"nomusic|0" & @CRLF & _
-					"noui|0" & @CRLF & _
-					"nosound|0" & @CRLF & _
-					"prefreset|0" & @CRLF & _
-					"sharearchive|0" & @CRLF & _
-					"uispanallmonitors|0" & @CRLF & _
-					"uninstall|0" & @CRLF & _
-					"useoldfov|0" & @CRLF & _
-					"verify|0" & @CRLF & _
-					"windowed|0" & @CRLF & _
-					"umbra|0")
+								"32|0" & @CRLF & _
+								"assetsrv|0|" & @CRLF & _
+								"authsrv|0|" & @CRLF & _
+								"autologin|0" & @CRLF & _
+								"bmp|0" & @CRLF & _
+								"clientport80|0" & @CRLF & _
+								"clientport443|0" & @CRLF & _
+								"copydat|0" & @CRLF & _
+								"dat|0|" & @CRLF & _
+								"diag|0" & @CRLF & _
+								"dx9single|0" & @CRLF & _
+								"fprwardrenderer|0" & @CRLF & _
+								"fps|0|" & @CRLF & _
+								"image|0" & @CRLF & _
+								"maploadinfo|0" & @CRLF & _
+								"mce|0" & @CRLF & _
+								"nopatchui|1" & @CRLF & _
+								"nomusic|0" & @CRLF & _
+								"noui|0" & @CRLF & _
+								"nosound|0" & @CRLF & _
+								"prefreset|0" & @CRLF & _
+								"sharearchive|0" & @CRLF & _
+								"uispanallmonitors|0" & @CRLF & _
+								"uninstall|0" & @CRLF & _
+								"useoldfov|0" & @CRLF & _
+								"verify|0" & @CRLF & _
+								"windowed|0" & @CRLF & _
+								"umbra|0")
 		EndIf
 		FileClose($gw2loc)
 	EndIf
