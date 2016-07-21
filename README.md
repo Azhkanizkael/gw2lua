@@ -20,9 +20,9 @@ Logging in will log you in to Guild Wars 2 with the selected account in the drop
 ###Help
 If you have any requests for help or assistance, please leave me feedback on twitter or twitch.
 
-Twitter: @Azhkanizkael
+Twitter: [@Azhkanizkael](https://twitter.com/azhkanizkael)
 
-Twitch: Twitch.tv/Azhkanizkael
+Twitch: [Twitch.tv/Azhkanizkael](https://www.twitch.tv/azhkanizkael)
 
 ###Legality of Multiclient
 https://forum-en.guildwars2.com/forum/support/account/Policy-3rd-Party-Programs-Multi-Boxing-Macros/first
