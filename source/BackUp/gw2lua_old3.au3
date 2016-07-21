@@ -4,11 +4,8 @@
 #AutoIt3Wrapper_Outfile_x64=..\exe\gw2lua-64.exe
 #AutoIt3Wrapper_Compile_Both=y
 #AutoIt3Wrapper_UseX64=y
-#AutoIt3Wrapper_Res_Fileversion=1.2.0.1
-#AutoIt3Wrapper_Res_Fileversion_AutoIncrement=y
-#AutoIt3Wrapper_Run_AU3Check=n
+#AutoIt3Wrapper_Add_Constants=n
 #AutoIt3Wrapper_Run_Tidy=y
-#AutoIt3Wrapper_Tidy_Stop_OnError=n
 #EndRegion ;**** Directives created by AutoIt3Wrapper_GUI ****
 ; *** Start added by AutoIt3Wrapper ***
 #include <ButtonConstants.au3>
@@ -62,9 +59,8 @@ Func gw2lua()
 	Global $gui_repair = GUICtrlCreateButton("Repair" & @CRLF & "Guild Wars 2", 201, 45, 100, 50, BitOR($BS_MULTILINE, $BS_VCENTER))
 	Global $gui_gw2location = GUICtrlCreateButton("Launcher" & @CRLF & "Settings", 201, 95, 100, 50, BitOR($BS_MULTILINE, $BS_VCENTER))
 	GUICtrlCreateLabel("Account:", 2, 2, 50, 20)
-	Global $gui_multiclient = GUICtrlCreateCheckbox("Multiclient", 55, 0, 90, 20)
+	Global $gui_multiclient = GUICtrlCreateCheckbox("Multiclient(WIP)", 55, 0, 90, 20)
 	loadaccounts()
-	MultiClientGO()
 	GUISetState(@SW_SHOW, $gui)
 
 	If FileExists($gw2loc) = 0 Then
@@ -160,6 +156,7 @@ Func gw2lua()
 						Local $state = GUICtrlRead($gui_multiclient)
 						If $state = 1 Then
 							UpdateSettings("sharearchive", 1)
+							MultiClientGO()
 						ElseIf $state = 4 Then
 							UpdateSettings("sharearchive", 0)
 						EndIf
@@ -168,9 +165,6 @@ Func gw2lua()
 						$accountname = GUICtrlRead($gui_accountlist)
 						$password = DecryptAccount($accountname)
 						ShellExecute($gw2, ' -email "' & $accountname & '" -password "' & $password & '"' & $gw2_parameters)
-						If GUICtrlRead($gui_multiclient) = 1 Then
-							ShellExecute(@AppDataDir & "\gw2lua\multi.bat", "", "", "", @SW_HIDE)
-						EndIf
 					Case $gui_delete
 						$accountname = GUICtrlRead($gui_accountlist)
 						$confirmation = MsgBox($MB_YESNO, "Caution", "Do you wish to remove the '" & $accountname & "' account?")
@@ -889,9 +883,8 @@ Func ReadSettings()
 EndFunc   ;==>ReadSettings
 
 Func MultiClientGO()
-	$handlebat = 'for /f "tokens=3,6 delims=: " %%I in (''handle.exe -accepteula -a "AN-Mutex-Window-Guild Wars 2"'') do if not "%%J" == "" handle.exe -accepteula -c %%J -y -p %%I'
-	FileCopy("handle.exe", @AppDataDir & "\gw2lua\handle.exe")
-	$bat = FileOpen(@AppDataDir & "\gw2lua\multi.bat", $FO_OVERWRITE)
-	FileWrite($bat, $handlebat)
-	FileClose($bat)
+$handlebat = 'for /f "tokens=3,6 delims=: " %%I in (''handle.exe -accepteula -a "AN-Mutex-Window-Guild Wars 2"'') do if not "%%J" == "" handle.exe -accepteula -c %%J -y -p %%I'
+$bat = FileOpen(@ScriptDir & "\MC.bat")
+FileWrite($bat,$handlebat)
+FileClose($bat)
 EndFunc   ;==>MultiClientGO

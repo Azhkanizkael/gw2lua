@@ -4,7 +4,7 @@
 #AutoIt3Wrapper_Outfile_x64=..\exe\gw2lua-64.exe
 #AutoIt3Wrapper_Compile_Both=y
 #AutoIt3Wrapper_UseX64=y
-#AutoIt3Wrapper_Res_Fileversion=1.2.0.1
+#AutoIt3Wrapper_Res_Fileversion=1.2
 #AutoIt3Wrapper_Res_Fileversion_AutoIncrement=y
 #AutoIt3Wrapper_Run_AU3Check=n
 #AutoIt3Wrapper_Run_Tidy=y
@@ -169,7 +169,7 @@ Func gw2lua()
 						$password = DecryptAccount($accountname)
 						ShellExecute($gw2, ' -email "' & $accountname & '" -password "' & $password & '"' & $gw2_parameters)
 						If GUICtrlRead($gui_multiclient) = 1 Then
-							ShellExecute(@AppDataDir & "\gw2lua\multi.bat", "", "", "", @SW_HIDE)
+							ShellExecute(@AppDataDir & "\gw2lua\multi.bat","","","",@SW_HIDE)
 						EndIf
 					Case $gui_delete
 						$accountname = GUICtrlRead($gui_accountlist)
