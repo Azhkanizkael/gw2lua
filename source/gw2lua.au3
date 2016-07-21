@@ -1,13 +1,10 @@
+#RequireAdmin
 #Region ;**** Directives created by AutoIt3Wrapper_GUI ****
 #AutoIt3Wrapper_Icon=Commander_tag_(blue).ico
 #AutoIt3Wrapper_Outfile=..\exe\gw2lua.exe
-#AutoIt3Wrapper_Outfile_x64=..\exe\gw2lua-64.exe
-#AutoIt3Wrapper_Compile_Both=y
-#AutoIt3Wrapper_UseX64=y
 #AutoIt3Wrapper_Res_Fileversion=1.2.0.1
 #AutoIt3Wrapper_Res_Fileversion_AutoIncrement=y
 #AutoIt3Wrapper_Run_AU3Check=n
-#AutoIt3Wrapper_Run_Tidy=y
 #AutoIt3Wrapper_Tidy_Stop_OnError=n
 #EndRegion ;**** Directives created by AutoIt3Wrapper_GUI ****
 ; *** Start added by AutoIt3Wrapper ***
@@ -167,10 +164,10 @@ Func gw2lua()
 					Case $gui_login
 						$accountname = GUICtrlRead($gui_accountlist)
 						$password = DecryptAccount($accountname)
-						ShellExecute($gw2, ' -email "' & $accountname & '" -password "' & $password & '"' & $gw2_parameters)
 						If GUICtrlRead($gui_multiclient) = 1 Then
-							ShellExecute(@AppDataDir & "\gw2lua\multi.bat", "", "", "", @SW_HIDE)
+							ShellExecute(@AppDataDir & "\gw2lua\multi.bat", "", "", "", @SW_SHOW)
 						EndIf
+						ShellExecute($gw2, ' -email "' & $accountname & '" -password "' & $password & '"' & $gw2_parameters)
 					Case $gui_delete
 						$accountname = GUICtrlRead($gui_accountlist)
 						$confirmation = MsgBox($MB_YESNO, "Caution", "Do you wish to remove the '" & $accountname & "' account?")
@@ -889,7 +886,7 @@ Func ReadSettings()
 EndFunc   ;==>ReadSettings
 
 Func MultiClientGO()
-	$handlebat = 'for /f "tokens=3,6 delims=: " %%I in (''handle.exe -accepteula -a "AN-Mutex-Window-Guild Wars 2"'') do if not "%%J" == "" handle.exe -accepteula -c %%J -y -p %%I'
+	$handlebat = 'for /f "tokens=3,6 delims=: " %%I in (''handle.exe -accepteula -a "AN-Mutex-Window-Guild Wars 2"'') do if not "%%J" == "" handle.exe -accepteula -c %%J -y -p %%I' &@CRLF & 'Pause'
 	FileCopy("handle.exe", @AppDataDir & "\gw2lua\handle.exe")
 	$bat = FileOpen(@AppDataDir & "\gw2lua\multi.bat", $FO_OVERWRITE)
 	FileWrite($bat, $handlebat)
