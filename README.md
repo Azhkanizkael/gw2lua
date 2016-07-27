@@ -25,7 +25,7 @@ Twitter: [@Azhkanizkael](https://twitter.com/azhkanizkael)
 Twitch: [Twitch.tv/Azhkanizkael](https://www.twitch.tv/azhkanizkael)
 
 ###Legality of Multiclient
-https://forum-en.guildwars2.com/forum/support/account/Policy-3rd-Party-Programs-Multi-Boxing-Macros/first
+https://forum-en.guildwars2.com/forum/game/gw2/Policy-3rd-Party-Programs-Multi-Boxing-Macros
 
 Dual- or Multi-Boxing
 * You may use more than one account at the same time.
