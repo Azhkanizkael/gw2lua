@@ -9,7 +9,7 @@ Now you need to add your account(s). This can be done by selecting the "Create N
 ###Options
 Now that you're set up, you can select any of the options. You can delete individual accounts, delete all accounts, update gw2, repair gw2, or log in to gw2 with the selected account.
 
-Deleting an account will delete the currently selected account from the hash.gw2lua file. This will work for deleting account unless there is only 1 account in which case you need to select "Delete All Accounts" in order to delete it. Deleting all accounts clears the hash.gw2lua file of all account entries and leaves it blank. These will display confirmation dialogues to confirm that you want to perform the action you requested.
+Deleting an account will delete the currently selected account from the hash.gw2lua file. Deleting all accounts clears the hash.gw2lua file of all account entries and leaves it blank. These will display confirmation dialogues to confirm that you want to perform the action you requested.
 
 Updating Guild Wars 2 will just launch the Guild Wars 2 launcher normally with no parameters.
 
