@@ -31,5 +31,4 @@ Dual- or Multi-Boxing
 * You may use more than one account at the same time.
 * You may use more than one computer at the same time.
 * You must be actively playing on each account.
-* And as stated above, you may not program your keyboard to perform functions on more than one account at a time. 
-* For example, if you press W on your keyboard to move forward, a single character on a single account should move forward. The keystroke or mouse click should not perform functions on more than one account.
+* And as stated above, you may not program your keyboard to perform functions on more than one account at a time. For example, if you press W on your keyboard to move forward, a single character on a single account should move forward. The keystroke or mouse click should not perform functions on more than one account.
